@@ -1,4 +1,3 @@
-const http = require('http');
 const app = require('./app.js');
 
 // Use Environment variable if set, else 3000
