@@ -8,7 +8,7 @@ const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
 app.use(morgan('dev'));
-app.use((bodyParser.apply.urlencoded({extended: true})));
+app.use((bodyParser.urlencoded({extended: true})));
 app.use(bodyParser.json());
 
 // All the requests to /producs will be forwarded to productRoutes -> see const above

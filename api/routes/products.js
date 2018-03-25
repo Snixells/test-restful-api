@@ -16,8 +16,14 @@ router.get('/:productID', (request, response, next) => {
 })
 
 router.post('/', (request, response, next) => {
+    const product = {
+        // Cause of body-parser body property can be used
+        name: request.body.name,
+        price: request.body.price
+    }
     response.status(201).json({
-        message: 'Handling POST requests for /products'
+        message: 'Handling POST requests for /products',
+        createdProduct: product
     })
 })
 
