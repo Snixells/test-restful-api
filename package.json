@@ -1,0 +1,22 @@
+{
+  "name": "test-restful-api",
+  "version": "1.0.0",
+  "description": "A RESTful API Test -> Small Shop API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snixells/test-restful-api.git"
+  },
+  "author": "Sebastian Schäfer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Snixells/test-restful-api/issues"
+  },
+  "homepage": "https://github.com/Snixells/test-restful-api#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
