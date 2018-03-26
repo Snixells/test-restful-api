@@ -1,11 +1,19 @@
 const express = require('express');
 const app = express();
-// Morgen = Node Server Logging Tool
+// Morgan = Node Server Logging Tool
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+
+// mongoose.connect('mongodb://Snixells:' + process.env.MONGO_ATLAS_PW + '@node-rest-shard-00-00-8j2qj.mongodb.net:27017,node-rest-shard-00-01-8j2qj.mongodb.net:27017,node-rest-shard-00-02-8j2qj.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shard-0&authSource=admin');
+// mongoose.connect('mongodb://Snixells:' + 'qouH6xQdnPt6Nsbd' + '@node-rest-shard-00-00-8j2qj.mongodb.net:27017,node-rest-shard-00-01-8j2qj.mongodb.net:27017,node-rest-shard-00-02-8j2qj.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shard-0&authSource=admin');
+// mongoose.connect('mongodb+srv://Snixells:' + "qouH6xQdnPt6Nsbd" + '@node-rest-8j2qj.mongodb.net/test');
+// mongoose.connect('mongodb+srv://Snixells:' + process.env.MONGO_ATLAS_PW + '@node-rest-8j2qj.mongodb.net/test');
+
+mongoose.connect('mongodb://localhost/restful-shop');
 
 app.use(morgan('dev'));
 app.use((bodyParser.urlencoded({extended: true})));
